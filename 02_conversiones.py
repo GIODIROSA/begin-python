@@ -28,4 +28,4 @@ ciudad4= "Coquimbo"
 print(ciudad3 == ciudad4)
 
 print(ciudad3 != ciudad4)
-#conversiones y condicionales
+#conversiones y condicionales // algo nuevo
