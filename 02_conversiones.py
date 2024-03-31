@@ -28,4 +28,37 @@ ciudad4= "Coquimbo"
 print(ciudad3 == ciudad4)
 
 print(ciudad3 != ciudad4)
-#conversiones y condicionales // algo nuevo
+
+nombre_conteo= "Giovanni"
+print(nombre_conteo[0])
+print(nombre_conteo[1])
+print(nombre_conteo[2])
+print(nombre_conteo[3])
+print(nombre_conteo[4])
+
+edad= 36
+edad_paciente = str(edad)
+print("La edad del paciente es: ", edad, "años")
+
+
+flotante_peso= 76.5
+peso_paciente= str(flotante_peso)
+print("El peso del paciente es: ", peso_paciente, "kg")
+
+radio= 2
+area= 3.14 * (radio ** 2)
+resultado= str(area)
+print("El área del circulo: ", resultado)
+
+nombre_cadena= "Giovanni"
+edad_estudiante= 36
+saludo= "Hola, mi nombre es: ", nombre_cadena + " y mi edad es: " + str(edad_estudiante) + "años"
+print(saludo)
+
+
+numero1= int(input("Ingresar un primer numero entero "))
+numero2= int(input("Ingresar el segundo numero entero "))
+suma= numero1 + numero2
+print(suma)
+
+
