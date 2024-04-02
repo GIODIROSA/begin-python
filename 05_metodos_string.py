@@ -15,3 +15,9 @@ print(animal.replace("nCh", "j")) # Busca el primero y el con el segundo argumen
 print("nCH" in animal) # Devuelve un boobleano // si se encuentra o no
 print("nCh" not in animal) # Busca si esta cadena de caracter no se encuentra en la variable
 
+
+#Sirve para crear anagramas
+
+frase = "amor"
+resultado = frase[::-1]
+print(resultado)
