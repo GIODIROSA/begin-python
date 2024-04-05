@@ -113,3 +113,6 @@ Escribir un programa en ANSI-C (C89/C90) que pida introducir por teclado al usua
 Nota: La petición de la edad debe repetirse si su valor no está dentro del intervalo cerrado [0, 150].
 
 ___________________________________________
+
+https://ellibrodepython.com/funciones-python
+https://ellibrodepython.com/args-kwargs-python
