@@ -14,3 +14,15 @@ else:
 
 
 print("Final del programa")
+
+
+#nota:
+
+contador = 1
+
+while contador <= 10:
+    print("Iteración", contador)
+    contador += 1
+    
+print("Fin del programa")
+
