@@ -26,3 +26,23 @@ while contador <= 10:
     
 print("Fin del programa")
 
+#ciclo for
+
+frutas = ["Manzana", "Pera", "Naranja", "Platano"]
+
+for fruta in frutas:
+    print("=>",fruta)
+    
+print("Programa terminado")
+
+
+ferias = ["Manzana", "Pera", "Naranja", "Platano"]
+
+for fruta in ferias:
+    if fruta == "Naranja":
+        continue #omitir
+    
+    print(fruta)
+
+
+
