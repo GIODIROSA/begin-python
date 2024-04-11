@@ -29,6 +29,7 @@ Objetivo: Implementar un sistema básico para gestionar préstamos de libros en 
 Instrucciones:
 
 Iniciar el programa con una lista de libros disponibles (título y autor).
+
 Permitir al usuario buscar un libro por título o autor para ver si está disponible.
 Si el libro está disponible, ofrecer la opción de prestar el libro. Esto lo marcará como no disponible hasta que sea devuelto.
 Permitir al usuario devolver libros, marcándolos nuevamente como disponibles.
@@ -116,3 +117,42 @@ ___________________________________________
 
 https://ellibrodepython.com/funciones-python
 https://ellibrodepython.com/args-kwargs-python
+
+____________________________________________________________________________
+
+#Escribe una función que tome una cadena como entrada y cuente cuántas palabras contiene.
+
+#Suma de números pares: Escribe una función llamada suma_pares que tome un número 
+#entero positivo n como parámetro y devuelva la suma de todos los números pares desde 1 hasta n.
+
+#Contador de vocales: Escribe una función llamada contador_vocales 
+#que tome una cadena como parámetro y devuelva un diccionario con la cantidad de cada vocal (a, e, i, o, u) en la cadena.
+
+#Verificador de números primos: Escribe una función llamada es_primo que tome un número entero positivo 
+#como parámetro y devuelva True si el número es primo, y False si no lo es.
+
+#Suma de números pares en una lista de números
+
+#Escribe un programa que solicite al usuario dos números y luego le permita elegir entre diferentes 
+#operaciones matemáticas (suma, resta, multiplicación, división). Debe usar funciones para realizar cada operación.
+
+#Crea una función que tome una lista de números como entrada y devuelva cuántos de esos números son pares e impares.
+
+#Escribe una función que tome un número como entrada y muestre la tabla de multiplicar de ese número del 1 al 10.
+
+#Escribe una función que tome un número como entrada y devuelva su factorial. 
+#El factorial de un número entero positivo n se define como el producto de todos los números enteros positivos desde 1 hasta n.
+
+#Escribe una función que tome un número como entrada y devuelva True si es primo y False si no lo es. 
+#Utiliza la lógica de determinar si un número es primo que mencioné anteriormente.
+
+#Escribe una función que genere los primeros n términos de la secuencia de Fibonacci. 
+#La secuencia de Fibonacci es una serie en la que cada número es la suma de los dos números anteriores.
+
+#Crea un juego en el que el programa selecciona un número aleatorio y le pide al jugador que lo adivine. 
+#Proporciona retroalimentación al jugador si el número es mayor o menor que el número seleccionado. Utiliza bucles para permitir múltiples intentos.
+
+#Escribe una función que tome una cadena como entrada y cuente cuántas palabras contiene.
+
+#Escribe un programa que solicite al usuario el precio original de un producto y el porcentaje de descuento, 
+#y luego calcule el precio final después del descuento. Utiliza una función para realizar el cálculo.
