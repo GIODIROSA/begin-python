@@ -152,7 +152,6 @@ ____________________________________________________________________________
 #Crea un juego en el que el programa selecciona un número aleatorio y le pide al jugador que lo adivine. 
 #Proporciona retroalimentación al jugador si el número es mayor o menor que el número seleccionado. Utiliza bucles para permitir múltiples intentos.
 
-#Escribe una función que tome una cadena como entrada y cuente cuántas palabras contiene.
 
 #Escribe un programa que solicite al usuario el precio original de un producto y el porcentaje de descuento, 
 #y luego calcule el precio final después del descuento. Utiliza una función para realizar el cálculo.
