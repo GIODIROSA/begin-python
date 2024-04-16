@@ -168,3 +168,24 @@ ____________________________________________________________________________
 #              return valor_positivo
 #             except ValueError:
 #                  print("Por favor, ingrese un número válido")   
+
+______________________________________________________-
+
+function esBisiesto($anio) {
+    if ($anio < 1582) {
+        // Aproximación para años anteriores a 1582
+        return $anio % 4 === 0;
+    } else {
+        // Reglas estándar del calendario gregoriano para años a partir de 1582
+        return ($anio % 4 === 0 && ($anio % 100 !== 0 || $anio % 400 === 0));
+    }
+}
+
+// Ejemplo de uso:
+$anio = 1500;
+
+if (esBisiesto($anio)) {
+    echo $anio . " es un año bisiesto.";
+} else {
+    echo $anio . " no es un año bisiesto.";
+}
