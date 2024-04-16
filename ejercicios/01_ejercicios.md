@@ -155,3 +155,16 @@ ____________________________________________________________________________
 
 #Escribe un programa que solicite al usuario el precio original de un producto y el porcentaje de descuento, 
 #y luego calcule el precio final después del descuento. Utiliza una función para realizar el cálculo.
+
+
+# ######
+
+# def solicitar_positivo(mensajes):
+#       while True:
+#             try:
+#              valor_positivo = float(input(mensajes))
+#              if valor_positivo < 0:
+#                   raise ValueError
+#              return valor_positivo
+#             except ValueError:
+#                  print("Por favor, ingrese un número válido")   

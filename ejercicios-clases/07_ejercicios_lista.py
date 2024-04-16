@@ -9,3 +9,5 @@ for numero in range(1,11):
 
 for item in numeros[::-1]:
         print(item)
+
+
