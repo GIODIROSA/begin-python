@@ -88,3 +88,38 @@ if "Pulga" in animales:
 else:
     print("No existe el animal que se consulta")
 
+
+mascotas2= ["Wolfgang", "Pelusa", "Pulga", "Felipe", "Pulga", "Chanchito", "Feliz"]
+
+# mascotas2.insert(2, "Gabriela")
+# mascotas2.append("Chanchito triste")
+# mascotas2.remove("Pulga") # Elimina el primero.
+mascotas2.pop(2) # eliminar el preciso del indice
+del mascotas2[0]
+mascotas2.clear()
+# print("=>", mascotas2)
+
+
+# Ordenando Listas
+
+numeros= [2, 4, 1, 45, 75, 22]
+
+# numeros.sort()
+# numeros.sort(reverse=True)
+
+numeros2 = sorted(numeros) # Devuelve una nueva lista
+numeros2 = sorted(numeros, reverse=True) # Devuelve una nueva lista pero al reves 
+
+
+print(numeros)
+print(numeros2)
+
+
+usuarios = [["Chanchito", 4], ["Felipe", 1], ["Pulga", 5]]
+def ordena(elemento):
+    return elemento[1]
+
+# usuarios.sort(key=ordena)
+usuarios.sort(key=ordena, reverse=True) #caso contrario
+
+print(usuarios)
