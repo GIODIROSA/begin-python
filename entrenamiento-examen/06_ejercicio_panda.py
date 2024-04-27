@@ -28,6 +28,11 @@ df= pd.DataFrame(datos[1:], columns=datos[0]) #olumns para agregar las columnas 
 
 df["edad"] = pd.to_numeric(df["edad"], errors="coerce")
 
+promedio_edad = round(df["edad"].mean(), 2)
+mediana_edad = round(df["edad"].median(), 2)
 
+suma_horas_uso_diario_por_rango_edad = df.groupby("rango_edad")["horas_uso_diario"].sum()
 
 print(df)
+print(promedio_edad)
+print(mediana_edad)
