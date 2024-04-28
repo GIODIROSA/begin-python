@@ -1,0 +1,31 @@
+pais,idioma,superficie,habitantes,zona_horaria,tipo_gobierno,periodos_dictadura,gobiernos_democraticos,ipc
+Argentina,Español,2780400,45195777,UTC-3,República,3,8,3.1
+Brasil,Portugués,8515767,212559417,UTC-3,República Federal,2,6,3.4
+Canadá,Inglés/Francés,9984670,37742154,UTC-3.5 a UTC-8,Monarquía constitucional,0,10,2.1
+Chile,Español,756102,19116201,UTC-4,República,1,7,3.2
+Colombia,Español,1141748,50882891,UTC-5,República,1,6,2.9
+Costa Rica,Español,51100,5094118,UTC-6,República,0,10,2.6
+Cuba,Español,109884,11326616,UTC-5,Socialista,1,0,4.5
+Estados Unidos,Inglés,9833517,331002651,UTC-4 a UTC-10,República Federal,0,10,2.2
+México,Español,1964375,128932753,UTC-6,República,1,7,2.7
+Perú,Español,1285216,32971854,UTC-5,República,2,5,3.0
+Venezuela,Español,916445,28435940,UTC-4,República,2,3,1.7
+Guatemala,Español,108889,17915568,UTC-6,República,1,5,2.8
+Honduras,Español,112492,9904607,UTC-6,República,2,4,2.5
+El Salvador,Español,21041,6486205,UTC-6,República,1,4,3.3
+Nicaragua,Español,130373,6624554,UTC-6,República,2,2,2.5
+Costa Rica,Español,51100,5094118,UTC-6,República,0,10,2.6
+Panamá,Español,75417,4314767,UTC-5,República,2,5,2.3
+Bolivia,Español/Quechua/Aymara,1098581,11673021,UTC-4,Estado Plurinacional,1,4,2.4
+Ecuador,Español,283561,17643054,UTC-5,República,1,6,2.9
+Paraguay,Español/Guaraní,406752,7132538,UTC-4,República,1,3,2.8
+Uruguay,Español,176215,3473730,UTC-3,República,0,10,2.7
+Jamaica,Inglés,10991,2961167,UTC-5,Monarquía constitucional,0,6,3.3
+Haití,Francés/Creole,27750,11402528,UTC-5,República,3,1,1.8
+República Dominicana,Español,48671,10847910,UTC-4,República,1,5,3.0
+Bahamas,Inglés,13943,393244,UTC-5,Monarquía constitucional,0,6,2.9
+Barbados,Inglés,430,287375,UTC-4,República,0,10,3.2
+Trinidad y Tobago,Inglés,5130,1399488,UTC-4,República,0,7,2.5
+Guyana,Inglés,214969,786552,UTC-4,República,0,8,2.4
+Surinam,Holandés,163820,586632,UTC-3,República,1,5,2.8
+Belize,Inglés,229
