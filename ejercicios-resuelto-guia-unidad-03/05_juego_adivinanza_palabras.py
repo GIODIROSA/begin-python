@@ -18,7 +18,7 @@ número de intentos restantes. check
 5. Repetir hasta adivinar o agotar Intentos: El proceso de adivinanza se repite hasta que el jugador adivine la palabra secreta o agote todos sus intentos.
 Restricciones:
 1. El juego debe ser capaz de manejar solo una palabra, check
-1.1 si el texto ingresado es mayor a una palabra devolver error.
+1.1 si el texto ingresado es mayor a una palabra devolver error. check
 """
 
 import pandas as pd
@@ -42,7 +42,6 @@ def enmascarar_palabra(palabra, letras_adivinadas):
 
 
 
-
 def adivinar_palabra(palabra_random):
     intento = 5
     letras_adivinadas = set()
@@ -50,11 +49,18 @@ def adivinar_palabra(palabra_random):
         try:
             print("Palabra que debe adivinar: ")
             enmascarar_palabra(palabra_random, letras_adivinadas)
-            letra_ingresada = input("Por favor, ingrese una letra: ")
+            letra = input("Por favor, ingrese una letra: ")
+            if len(letra) > 1:
+                print("*"*50)
+                print("¡¡¡¡¡ERROR!!!!! Debe ingresar solo una letra")
+                print("*"*50)
+                continue
+            else: 
+                letra_ingresada_usuario = letra
 
-            if letra_ingresada in palabra_random:
-                letras_adivinadas.add(letra_ingresada)
-                print(f"La letra ingresada: {letra_ingresada} si está en la palabra por adivinar continua intentando")
+            if letra_ingresada_usuario in palabra_random:
+                letras_adivinadas.add(letra_ingresada_usuario)
+                print(f"La letra ingresada: {letra_ingresada_usuario} si está en la palabra por adivinar continua intentando")
                 if all(letra in letras_adivinadas for letra in palabra_random):
                    print("¡Felicidades! Has adivinado la palabra completa.")
                    break
@@ -94,34 +100,6 @@ Cable - Utilizado para transmitir electricidad o datos.
 Dulce - Alimento con sabor azucarado.
 Fresa - Fruta roja y pequeña.
 Globo - Objeto inflable que flota en el aire.
-
-
-    def adivinar_palabra(palabra_random):
-    intento = 5
-    letras_adivinadas = set()  # Usamos un conjunto para almacenar letras adivinadas
-
-    while intento > 0:
-        print("Palabra que debe adivinar: ")
-        enmascarar_palabra(palabra_random, letras_adivinadas)
-        letra_ingresada = input("Por favor, ingrese una letra: ")
-
-        if letra_ingresada in palabra_random:
-            letras_adivinadas.add(letra_ingresada)  # Agregar la letra al conjunto de letras adivinadas
-            print(f"La letra ingresada: {letra_ingresada} sí está en la palabra. Continúa intentando.")
-            # Verificar si todas las letras han sido adivinadas
-            if all(letra in letras_adivinadas for letra in palabra_random):
-                print("¡Felicidades! Has adivinado la palabra completa.")
-                break
-        else:
-            print("Incorrecto, la letra no está en la palabra")
-            intento -= 1
-            print(f"Número de intentos restante: {intento}")
-
-        if intento == 0:
-            print("Se acabó el número de intentos")
-            break
-
-
 
 """
 
