@@ -7,7 +7,7 @@ contador= 0
 
 """ 
 recorrer cada letras y parsearlas
-evaluar la vocal a e i o u 
+evaluar la vocal a e i o u
 debe contar
 mostrar la cantidad total de vocales
 """ 

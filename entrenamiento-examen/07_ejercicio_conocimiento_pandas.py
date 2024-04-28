@@ -125,3 +125,26 @@ def main():
 main()
 
 
+# ************************************************
+
+"""
+import pandas as pd
+
+# Crear un DataFrame de ejemplo
+data = {
+    'pais': ['Belize', 'Guatemala', 'Jamaica', 'Barbados'],
+    'idioma': ['Inglés', 'Español', 'Inglés', 'Inglés'],
+    'superficie': [22966, 108889, 10991, 430]  # Superficie en km2
+}
+
+df = pd.DataFrame(data)
+
+# Filtrar para obtener solo países de habla inglesa en Latinoamérica
+paises_ingleses = df[df['idioma'] == 'Inglés']
+
+# Calcular la media de la superficie de los países de habla inglesa
+media_superficie = paises_ingleses['superficie'].mean()
+
+print("Media de la superficie de países de habla inglesa en Latinoamérica:", media_superficie)
+
+"""
