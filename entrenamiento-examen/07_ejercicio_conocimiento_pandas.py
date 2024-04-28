@@ -125,5 +125,3 @@ def main():
 main()
 
 
-
-# print("Mediana de superficie", data_frame["Superficie (km2)"].median())
