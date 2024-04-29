@@ -1,5 +1,4 @@
-
-import pandas as pd
+import pandas as pd # type: ignore
 import csv
 
 
@@ -12,7 +11,7 @@ def cargar_datos_csv(archivo):
 
 def obtener_datos(datos):
     df= pd.DataFrame(datos[1:], columns=datos[0])
-    # print(df)
+    print(df)
     return df
 
 def convertir_columna_a_numeros(df, columna):
