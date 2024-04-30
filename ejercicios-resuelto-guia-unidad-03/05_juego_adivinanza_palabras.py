@@ -33,7 +33,7 @@ def generador_palabra():
 
 def enmascarar_palabra(palabra, letras_adivinadas):
     letras_adivinadas.add(palabra[0])
-    
+      
     mascara = [letra if letra in letras_adivinadas else '_' for letra in palabra]
     
     mascara_str = ' '.join(mascara)

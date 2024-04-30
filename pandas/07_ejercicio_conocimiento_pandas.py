@@ -1,6 +1,20 @@
 import pandas as pd # type: ignore
 import csv
 
+"""
+    nota:
+          lector_csv = csv.reader(csvarchivo)
+          datos = list(lector_csv)
+          pandas
+          
+          para leer el csv y ademas convertirlo en list y hacer un random
+          palabras_df = pd.read_csv("palabra.csv")
+          palabras = palabras_df["Palabras"].to_list()
+          palabra_secreta = random.choice(palabras)
+          print(palabra_secreta)          
+
+"""
+
 
 def cargar_datos_csv(archivo):
     with open(archivo, newline="", encoding='utf-8') as csvarchivo:
