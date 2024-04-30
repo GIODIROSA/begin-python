@@ -17,7 +17,6 @@ Restricciones:
 •Cada estudiante debe tener un número de identificación único en el registro. (check)
 """
 
-
 estudiantes = []
 
 # CRUD - NO UPDATE
@@ -66,14 +65,14 @@ def mostrar_estudiantes_registrado():
             print("_"*50)
             
 
-def gestor_registro_estudiante(nombre, apellido, rut):
+def gestor_registro_estudiante():
      while True:
         try:
             opcion = menu_principal()
             if opcion == 1:
-                nombre = input(nombre)
-                apellido = input(apellido)
-                rut = input(rut)
+                nombre = input("Por favor, ingrese el nombre del estudiante: ")
+                apellido = input("Por favor, ingrese el apellido: ")
+                rut = input("Por favor, ingrese el rut con digito verificador pero sin guión. ej: 39227266: ")
                 agregar_estudiante(nombre, apellido, rut)
                 print("Estudiantes", estudiantes)
                 print("¡GRACIAS! por agregar un nuevo estudiante")
@@ -97,11 +96,7 @@ def gestor_registro_estudiante(nombre, apellido, rut):
 
 def main():
     
-    mensaje_nombre = "Por favor, ingrese el nombre del estudiante: "
-    mensaje_apellido= "Por favor, ingrese el apellido: "
-    mensaje_rut = "Por favor, ingrese el rut con digito verificador pero sin guión. ej: 39227266: "
-    
-    gestor_registro_estudiante(mensaje_nombre, mensaje_apellido, mensaje_rut)
+    gestor_registro_estudiante()
 
 
 main()
