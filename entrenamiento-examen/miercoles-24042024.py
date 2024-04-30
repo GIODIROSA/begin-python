@@ -1,5 +1,5 @@
 import csv
-import pandas as pd
+import pandas as pd #type:ignore
 
 def cargar_datos_desde_csv(nombre_archivo):
     with open(nombre_archivo, newline='') as csvarchivo:
