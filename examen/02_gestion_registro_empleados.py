@@ -63,12 +63,22 @@ def actualizar_salario(actualizacion_empleado):
 
 
   
+# def mostrar_registro_empleados():
+#     contador = 0
+#     for empleado in empleados:
+#         contador += 1
+#         print(f"{contador}). {empleado}")
+#         print("*"*50)
+
 def mostrar_registro_empleados():
-    contador = 0
-    for empleado in empleados:
-        contador += 1
-        print(f"{contador}). {empleado}")
-        print("*"*50)
+    print("*"*50)
+    print("+++a continuación se mostrará el registro de empleados")
+    
+    for indice, empleado in enumerate(empleados, start= 1):
+        print(f"Empleado: {indice}.) {empleado}")
+
+    print("*"*50)
+
 
 
 def eliminar_registro_empleado(eliminar_empleado):
@@ -81,6 +91,9 @@ def eliminar_registro_empleado(eliminar_empleado):
             empleados.remove(empleado)
     print("Empleado eliminado correctamente")
     
+
+# VALIDAR ------> SALARIO EN CUANTO A QUE NO ENTRE LETRAS
+
     
         
 def registro_empleados():
@@ -92,7 +105,7 @@ def registro_empleados():
                 nombre = input("Ingresar el nombre del empleado: ")
                 apellido = input("Ingrese el apellido del empleado: ")
                 cargo = input("Ingrese el cargo del empleado: ")
-                salario = input("Ingrese el salario del empleado: ")
+                salario = float(input("Ingrese el salario del empleado: "))
 
                 nuevo_empleado= {
                     "nombre": nombre,
@@ -107,7 +120,7 @@ def registro_empleados():
                 print("Opción para Actualizar el salario del empleado")
                 nombre = input("Ingresar el nombre del empleado: ")
                 apellido = input("Ingrese el apellido del empleado: ")
-                nuevo_salario = int(input("Ingrese el nuevo monto de salario para actualizar: "))
+                nuevo_salario = float(input("Ingrese el nuevo monto de salario para actualizar: "))
 
                 actualizacion_empleado= {
                     "nombre": nombre,
