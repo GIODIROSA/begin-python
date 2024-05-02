@@ -106,4 +106,27 @@ main()
 
 
 
+"""
+def validar_tipo_de_dato(file_path):
+    # Cargar el archivo CSV en un DataFrame
+    df = pd.read_csv(file_path)
 
+    # Verificar los tipos de datos de cada columna
+    tipos_de_dato_correctos = {
+        "ID": int,
+        "Título": str,
+        "Género": str,
+        "Director": str,
+        "Recaudación (EUR MM)": float
+    }
+
+    for columna, tipo in tipos_de_dato_correctos.items():
+        if df[columna].dtype == tipo:
+            print(f"La columna '{columna}' tiene el tipo de dato correcto: {tipo}.")
+        else:
+            print(f"La columna '{columna}' tiene un tipo de dato incorrecto. Se esperaba {tipo} pero se encontró {df[columna].dtype}.")
+
+# Llamar a la función para validar el archivo CSV
+validar_tipo_de_dato('tu_archivo.csv')
+
+"""

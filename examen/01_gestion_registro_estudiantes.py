@@ -92,10 +92,9 @@ def gestor_registro_estudiante():
             print("¡¡¡ERROR!!! al ingresar un estudiante")
 
 
-# MODIFICAR PARA QUE SEA UNA LISTA O DICCIONARIO DE MENSAJE PARA DESTRUCTURAR
+
 
 def main():
-    
     gestor_registro_estudiante()
 
 
