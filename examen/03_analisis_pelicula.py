@@ -38,7 +38,7 @@ def cargar_datos_csv(archivo):
 
 def obtener_datos(datos):
     df= pd.DataFrame(datos[1:], columns=datos[0])
-    # print(df)
+    print("///", df)
     return df
 
 # prueba de lectura 
@@ -48,6 +48,32 @@ def muestra_series(datos):
     return nuevo_df
 
 
+def muestra_series3(df, nombre_columna):
+    print("nombre columna", nombre_columna)
+    if nombre_columna in df.columns:
+        nuevo_df = pd.Series(df[nombre_columna].values, name=nombre_columna)
+        print("=>", nuevo_df)
+        return nuevo_df
+    else:
+        print(f"Error: La columna '{nombre_columna}' no existe en el DataFrame.")
+        return None
+    
+
+def muestra_series4(df, nombres_columnas):
+    # Asegurarse de que todas las columnas especificadas existen en el DataFrame
+    if all(columna in df.columns for columna in nombres_columnas):
+        # Crear un nuevo DataFrame solo con las columnas especificadas
+        nuevo_df = df[nombres_columnas]
+        print("------->", nuevo_df)
+        return nuevo_df
+    else:
+        # Identificar las columnas faltantes para mostrar en el mensaje de error
+        columnas_faltantes = [columna for columna in nombres_columnas if columna not in df.columns]
+        print(f"Error: Las columnas {columnas_faltantes} no existen en el DataFrame.")
+        return None
+
+
+
 def convertir_columna_a_numeros(df, columna):
    df[columna] = pd.to_numeric(df[columna], errors='coerce')
 
@@ -55,9 +81,9 @@ def convertir_columna_a_numeros(df, columna):
 def mostrar_datos(datos):
     df= pd.DataFrame(datos[1:], columns=datos[0])
     valores_faltantes = df.isnull().sum()
-    print("\nValores faltantes:")
-    print("valores faltantes: ",valores_faltantes)
-    #print(df)
+    print("\nValores faltantes+:")
+    print("valores faltantes+: ",valores_faltantes)
+    print(df)
 
 
 def mayor_recaudación(data_frame):
@@ -88,8 +114,6 @@ def promedio_genero_recaudacion(data_frame):
 
 
 
-
-
  # function principal - se gestiona la invocación de las function
 def main():
     ####################### Get data ##############################
@@ -103,10 +127,25 @@ def main():
     minimo_recaudacion(data_frame)
     promedio_genero_recaudacion(data_frame)
     muestra_series(datos)
+    # muestra_series2(datos)
 
+    # df = pd.DataFrame(datos, columns=['ID', 'Título', 'Género', 'Director', 'Recaudación (EUR MM)'])
+    df = pd.DataFrame(datos, columns=['Director'])
+    serie_columna = muestra_series3(df, 'Director')
+    print(serie_columna)
+
+
+    df_other = pd.DataFrame(datos)
+    columnas_deseadas= ['Director', 'Título']
+    df_resultado = muestra_series4(df_other, columnas_deseadas)
+    print(df_resultado)
 
 
 main()
+
+
+
+
 
 
 #print("Mínimo de superficie", data_frame["Superficie (km2)"].min())
@@ -135,5 +174,29 @@ def validar_tipo_de_dato(file_path):
 
 # Llamar a la función para validar el archivo CSV
 validar_tipo_de_dato('tu_archivo.csv')
+
+"""
+
+"""
+
+# Supongamos que tienes una lista de listas con datos
+datos = [['1', 'Avengers: Endgame', 'Acción', 'Anthony Russo', '2518.0'],
+         ['2', 'Avatar', 'Ciencia ficción', 'James Cameron', '2511.4'],
+         ...]
+
+# Convertir la lista a DataFrame
+df = pd.DataFrame(datos, columns=['ID', 'Título', 'Género', 'Director', 'Recaudación (EUR MM)'])
+
+def muestra_series3(df, nombre_columna):
+    if nombre_columna in df.columns:
+        nuevo_df = pd.Series(df[nombre_columna].values, name=nombre_columna)
+        print("=>", nuevo_df)
+        return nuevo_df
+    else:
+        print(f"Error: La columna '{nombre_columna}' no existe en el DataFrame.")
+        return None
+
+# Llamar a la función con el DataFrame y el nombre de la columna que deseas
+serie_columna = muestra_series3(df, 'Director')
 
 """
