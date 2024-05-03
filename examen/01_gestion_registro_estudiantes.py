@@ -38,16 +38,19 @@ def menu_principal():
 def agregar_estudiante(nombre, apellido, rut):
     for estudiante in estudiantes:
         if estudiante["rut"] == rut:
-            print("Ya existe un estudiante con este rut, ingrese otro")
+            print("+"*50)
+            print(f"+++++YA EXISTE UN ESTUDIANTE CON ESTE RUT+++++ {rut}")
+            print("+"*50)
             return
         
     nuevo_estudiante= {
-        "nombre": nombre,
-        "apellido": apellido,
+        "nombre": nombre.capitalize(),
+        "apellido": apellido.capitalize(),
         "rut": rut
     }
     
     estudiantes.append(nuevo_estudiante)
+    print("¡GRACIAS! por agregar un nuevo estudiante")
                
 
 def eliminar_registro_estudiante(rut):
@@ -55,14 +58,18 @@ def eliminar_registro_estudiante(rut):
     for estudiante in estudiantes:
         if estudiante["rut"] == rut_a_eliminar:
             estudiantes.remove(estudiante)
-            print("El estudiante se elimina el registro")
+            print("+"*100)
+            print("EL ESTUDIANTE HA SIDO ELIMINADO DEL SISTEMA")
+            print("+"*100)
+            
+            mostrar_estudiante(estudiantes)
 
 
-def mostrar_estudiantes_registrado():
-    for estudiante in estudiantes:
-        for clave, detalle in estudiante.items():
-            print(f"{clave.capitalize()}: {detalle.capitalize()}\n")
-            print("_"*50)
+
+def mostrar_estudiante(estudiantes):
+     for indice, estudiante in enumerate(estudiantes, start = 1):
+                    print("+"*100)
+                    print(f"{indice}.) {estudiante}")
             
 
 def gestor_registro_estudiante():
@@ -72,17 +79,23 @@ def gestor_registro_estudiante():
             if opcion == 1:
                 nombre = input("Por favor, ingrese el nombre del estudiante: ")
                 apellido = input("Por favor, ingrese el apellido: ")
-                rut = input("Por favor, ingrese el rut con digito verificador pero sin guión. ej: 39227266: ")
-                agregar_estudiante(nombre, apellido, rut)
-                print("Estudiantes", estudiantes)
-                print("¡GRACIAS! por agregar un nuevo estudiante")
+                rut = int(input("Por favor, ingrese el rut con digito verificador pero sin guión. ej: 39227266: "))
+                if rut < 0:
+                    print("Por favor, ingrese un rut correcto")
+                else:
+                    agregar_estudiante(nombre, apellido, rut)
+                    
+                mostrar_estudiante(estudiantes)
             elif opcion == 2:
                 print("Para eliminar un registro debe ingresar el rut")
-                rut= input("Por favor, ingrese el rut con digito verificador pero sin guión. ej: 39227266: ")
-                eliminar_registro_estudiante(rut)
-                print("Estudiantes:", estudiantes)
+                rut= int(input("Por favor, ingrese el rut con digito verificador pero sin guión. ej: 111111: "))
+                if rut < 0:
+                    print("Rut incorrecto")
+                else:
+                    eliminar_registro_estudiante(rut)
+               
             elif opcion == 3:
-                mostrar_estudiantes_registrado()
+                mostrar_estudiante(estudiantes)
             elif opcion == 4:
                 print("Gracias por ingresar al sistema de inscripción de estudiantes")
                 break

@@ -42,7 +42,7 @@ def menu_principal():
 
 def registro_empleado(nuevo_empleado):
     empleados.append(nuevo_empleado)
-    print(empleados)
+    mostrar_registro_empleados()
     print("+++El empleado se ha registrado correctamente +++")
  
     
@@ -58,7 +58,7 @@ def actualizar_salario(actualizacion_empleado):
         else: 
             print("Nombre y apellido del empleado no se encuentra en el sistema")
             
-    print(empleados)
+    mostrar_registro_empleados()
     print(f"+++ El salario del empleado se actualizó correctamente +++")
 
 
@@ -92,7 +92,7 @@ def eliminar_registro_empleado(eliminar_empleado):
     print("Empleado eliminado correctamente")
     
 
-# VALIDAR ------> SALARIO EN CUANTO A QUE NO ENTRE LETRAS
+
 
     
         
@@ -107,12 +107,15 @@ def registro_empleados():
                 cargo = input("Ingrese el cargo del empleado: ")
                 salario = float(input("Ingrese el salario del empleado: "))
 
-                nuevo_empleado= {
-                    "nombre": nombre,
-                    "apellido": apellido,
-                    "cargo": cargo,
-                    "salario": salario
-                }
+                if salario < 0:
+                    print("Debe ingresar una cifra valida de salario")
+                else:
+                    nuevo_empleado= {
+                        "nombre": nombre.lower(),
+                        "apellido": apellido.lower(),
+                        "cargo": cargo.lower(),
+                        "salario": salario
+                    }
 
                 registro_empleado(nuevo_empleado)
                 
@@ -122,21 +125,28 @@ def registro_empleados():
                 apellido = input("Ingrese el apellido del empleado: ")
                 nuevo_salario = float(input("Ingrese el nuevo monto de salario para actualizar: "))
 
-                actualizacion_empleado= {
-                    "nombre": nombre,
-                    "apellido": apellido,
-                    "nuevo-salario": nuevo_salario
-                }
+                if nuevo_salario < 0:
+                    print("Ingrese una cifra de salario correcta")
+                else:
+                    actualizacion_empleado= {
+                        "nombre": nombre.lower(),
+                        "apellido": apellido.lower(),
+                        "nuevo-salario": nuevo_salario
+                    }
 
                 actualizar_salario(actualizacion_empleado)
                 
             elif opcion == 3:
-                 eliminar_empleado= {
-                    "nombre": nombre,
-                    "apellido": apellido,
+
+                nombre_eliminar = input("Ingresar el nombre del empleado: ")
+                apellido_eliminar = input("Ingrese el apellido del empleado: ")
+                
+                eliminar_empleado= {
+                    "nombre": nombre_eliminar.lower(),
+                    "apellido": apellido_eliminar.lower(),
                 }
 
-                 eliminar_registro_empleado(eliminar_empleado)
+                eliminar_registro_empleado(eliminar_empleado)
                       
             elif opcion == 4:
                 mostrar_registro_empleados()
