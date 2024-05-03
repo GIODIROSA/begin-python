@@ -170,6 +170,10 @@ nota: el sorted()--- devuelve una lista
 list() # convertir a lista
 tuple() #convertir a tupla
 
+diccionario para borrar 
+
+del my_dicccionario["name"] #para borrar
+
 lista_diccionarios = [
     {'nombre': 'Carlos', 'edad': 30},
     {'nombre': 'Ana', 'edad': 25},
