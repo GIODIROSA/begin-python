@@ -38,8 +38,14 @@ def cargar_datos_csv(archivo):
 
 def obtener_datos(datos):
     df= pd.DataFrame(datos[1:], columns=datos[0])
-    print(df)
+    # print(df)
     return df
+
+# prueba de lectura 
+def muestra_series(datos):
+    nuevo_df= pd.Series(datos)
+    print("=>", nuevo_df)
+    return nuevo_df
 
 
 def convertir_columna_a_numeros(df, columna):
@@ -96,6 +102,7 @@ def main():
     mayor_recaudacion(data_frame)
     minimo_recaudacion(data_frame)
     promedio_genero_recaudacion(data_frame)
+    muestra_series(datos)
 
 
 
