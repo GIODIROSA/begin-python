@@ -163,6 +163,7 @@ def main():
 main()
 
 
+
 """
 
 nota: el sorted()--- devuelve una lista
@@ -175,6 +176,12 @@ diccionario para borrar
 del my_dicccionario["name"] #para borrar
 
 my_dict = dict(sorted(my_diccionario.items())) # para ordenar los diccionarios y lo vuelve a convertir en diccionario
+
+comprobar que sea numero y longitud
+
+phone = 2
+if phone.isdigit() and len(phone) > 0 and len(phone) >= 11:
+
 
 lista_diccionarios = [
     {'nombre': 'Carlos', 'edad': 30},
