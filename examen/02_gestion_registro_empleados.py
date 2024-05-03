@@ -161,3 +161,24 @@ def main():
 
 
 main()
+
+
+"""
+
+lista_diccionarios = [
+    {'nombre': 'Carlos', 'edad': 30},
+    {'nombre': 'Ana', 'edad': 25},
+    {'nombre': 'Felipe', 'edad': 20}
+]
+
+# Ordenar la lista de diccionarios por la clave 'nombre'
+lista_ordenada = sorted(lista_diccionarios, key=lambda x: x['nombre'])
+
+print(lista_ordenada)
+
+v2
+
+# Ordenar considerando que algunos diccionarios podrían no tener la clave 'nombre'
+lista_ordenada = sorted(lista_diccionarios, key=lambda x: x.get('nombre', ''))
+
+"""
