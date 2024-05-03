@@ -174,6 +174,8 @@ diccionario para borrar
 
 del my_dicccionario["name"] #para borrar
 
+my_dict = sorted(my_diccionario.items()) # para ordenar los diccionarios
+
 lista_diccionarios = [
     {'nombre': 'Carlos', 'edad': 30},
     {'nombre': 'Ana', 'edad': 25},
