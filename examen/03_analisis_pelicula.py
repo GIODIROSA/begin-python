@@ -112,8 +112,6 @@ def convertir_columna_a_numeros(df, columna):
 
 
 
-
-
 def mayor_recaudación(data_frame):
     maximo_recaudado = round(data_frame["Recaudación (EUR MM)"].max(), 2)
     indice_maximo_recaudado = data_frame["Recaudación (EUR MM)"].idxmax() # idxmax

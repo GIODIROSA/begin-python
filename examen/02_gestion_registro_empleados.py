@@ -165,6 +165,11 @@ main()
 
 """
 
+nota: el sorted()--- devuelve una lista
+
+list() # convertir a lista
+tuple() #convertir a tupla
+
 lista_diccionarios = [
     {'nombre': 'Carlos', 'edad': 30},
     {'nombre': 'Ana', 'edad': 25},
