@@ -41,6 +41,39 @@ def obtener_datos(datos):
     print("///", df)
     return df
 
+# def mostrar_datos(datos):
+#     df= pd.DataFrame(datos[1:], columns=datos[0])
+#     valores_faltantes = df.isnull().sum()
+#     print("\nValores faltantes+:")
+#     print("valores faltantes+: ",valores_faltantes)
+#     print(df)
+
+def mostrar_datos(datos):
+    df = obtener_datos(datos)  # Reutiliza la función obtener_datos
+    # Calcular valores faltantes
+    valores_faltantes = df.isnull().sum()
+    print("\nValores faltantes:")
+    print(valores_faltantes)
+    
+    # Opción 1: Eliminar filas con valores null
+    df_limpio = df.dropna()
+    print("\nDataFrame sin filas con valores null:")
+    print(df_limpio)
+
+    # Opción 2: Rellenar los valores null con un valor predeterminado, por ejemplo, 0 o una cadena vacía
+    df_rellenado = df.fillna(0)  # Cambia 0 por cualquier otro valor predeterminado relevante
+    print("\nDataFrame con valores null rellenados con 0:")
+    print(df_rellenado)
+
+    # Opción 3: Más complejo, como rellenar con la media de la columna si es numérica
+    for columna in df.columns:
+        if df[columna].dtype in ['float64', 'int64']:  # Solo para columnas numéricas
+            df[columna].fillna(df[columna].mean(), inplace=True)
+    print("\nDataFrame con valores null en columnas numéricas rellenados con la media:")
+    print(df)
+
+
+
 # prueba de lectura 
 def muestra_series(datos):
     nuevo_df= pd.Series(datos)
@@ -78,12 +111,7 @@ def convertir_columna_a_numeros(df, columna):
    df[columna] = pd.to_numeric(df[columna], errors='coerce')
 
 
-def mostrar_datos(datos):
-    df= pd.DataFrame(datos[1:], columns=datos[0])
-    valores_faltantes = df.isnull().sum()
-    print("\nValores faltantes+:")
-    print("valores faltantes+: ",valores_faltantes)
-    print(df)
+
 
 
 def mayor_recaudación(data_frame):
