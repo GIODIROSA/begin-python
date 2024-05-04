@@ -1,0 +1,31 @@
+ID,Sistema Operativo,Empresa,Descargas (millones)
+1,Android,Google,3000
+2,Windows 10,Microsoft,1300
+3,iOS,Apple,2000
+4,Windows 7,Microsoft,False
+5,macOS,Apple,100
+6,Linux,Comunidad de código abierto,600
+7,Chrome OS,Google,40
+8,Windows 11,Microsoft,200
+9,Ubuntu,Canonical,100
+10,Fedora,Red Hat,50
+11,CentOS,Red Hat,20
+12,Debian,Comunidad de código abierto,120
+13,Mint,Comunidad de código abierto,25
+14,Solaris,Oracle,10
+15,openSUSE,SUSE,15
+16,FreeBSD,Comunidad de código abierto,30
+17,Manjaro,Comunidad de código abierto,10
+18,Elementary OS,Comunidad de código abierto,5
+19,Zorin OS,Zorin Group,3
+20,ReactOS,Comunidad de código abierto,2
+21,Haiku,Haiku Inc.,1
+22,Deepin,Wuhan Deepin Technology,8
+23,KDE Neon,KDE e.V.,4
+24,PCLinuxOS,Comunidad de código abierto,6
+25,Puppy Linux,Comunidad de código abierto,3
+26,Mageia,Mageia.Org,2
+27,Lubuntu,Comunidad de código abierto,7
+28,Kubuntu,Canonical,5
+29,Xubuntu,Canonical,4
+30,Windows XP,Microsoft,80
