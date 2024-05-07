@@ -9,15 +9,16 @@ Pasos:
 •	Eliminar invitado: El usuario ingresará el nombre de un invitado para eliminarlo de la lista de invitados. (check)
 •	Mostrar lista de invitados: El usuario podrá visualizar la lista actualizada de invitados. (check)
 •	Repetir hasta terminar: El usuario podrá realizar múltiples operaciones de gestión de invitados antes de decidir terminar el script. (check)
-•	Mensajes de estado: Después de cada operación realizada por el usuario, el sistema mostrará el estado de la operación.
+•	Mensajes de estado: Después de cada operación realizada por el usuario, el sistema mostrará el estado de la operación. (check)
 Restricciones:
-•	Cada nombre de invitado debe ser una cadena de texto no vacía. 
+•	Cada nombre de invitado debe ser una cadena de texto no vacía. (check)
 •	No se permiten nombres de invitados duplicados en la lista. (check)
 •	Las operaciones de agregar invitado, eliminar invitado y mostrar la lista de invitados las debe realizar con una función personalizada. (check)
 Entregable:
 Archivo con la siguiente estructura: nombre-apellido-ejercicio-01.py
 
 """
+import os 
 
 invitados = []
 
@@ -105,15 +106,24 @@ def registro_invitados():
               }
                   
               agregar_invitados(nuevo_invitado)
-                
+              input("Presione enter para continuar....")  
+              os.system("cls")               
+              
+                            
             elif opcion == 2: 
                 nombre= input("Ingresar el nombre del invitado que desea eliminar del registro: ") 
                 
                 eliminar_registro_invitado(nombre)
+                input("Presione enter para continuar....") 
+                os.system("cls")               
+                
                 
             elif opcion == 3:
                 
                 mostrar_registro_invitados()
+                input("Presione enter para continuar....") 
+                os.system("cls")               
+                               
                       
             elif opcion == 4:
                 print("¡¡¡Gracias!!! por usar el sistema de gestión de invitados. Nos vemos pronto")
@@ -133,3 +143,16 @@ def main():
 
 
 main()
+
+"""
+para eliminar un nombre de una lista de invitados
+
+nombre_a_eliminar= input("Ingrese el nombre del usuario")
+
+contador = 0
+if nombre in lista_invitados:
+    if nombre == nombre_a_eliminar:
+        del lista_invitado[contador]
+    contador += 1
+    
+"""
