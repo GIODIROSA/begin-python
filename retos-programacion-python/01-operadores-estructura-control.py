@@ -18,68 +18,68 @@
  */
  """
 
-suma = 2 + 3
-print("Suma", suma)
+# suma = 2 + 3
+# print("Suma", suma)
 
-resta= 3-6
-print("Resta", resta)
+# resta= 3-6
+# print("Resta", resta)
 
-division = 2 / 4
-print("Dividir", division)
+# division = 2 / 4
+# print("Dividir", division)
 
-resto = 2 % 180
-print("Resto", resto) 
+# resto = 2 % 180
+# print("Resto", resto) 
 
-asignacion = "se asigna un valor string"
-print("Asignacion", asignacion)
+# asignacion = "se asigna un valor string"
+# print("Asignacion", asignacion)
 
-mayor = 6 > 2
-print("Mayor que", mayor)
+# mayor = 6 > 2
+# print("Mayor que", mayor)
 
-menor= 2 < 6
-print("Menor que", menor)
+# menor= 2 < 6
+# print("Menor que", menor)
 
-igual = 2 == 2
-print("Igualdad", igual)
+# igual = 2 == 2
+# print("Igualdad", igual)
 
-diferencia = 3 != 5
-print("Diferencia", diferencia)
+# diferencia = 3 != 5
+# print("Diferencia", diferencia)
 
-# Pertenencia
+# # Pertenencia
 
-lista= ["loquesea", "enmanuel", "pedro", "italia"]
+# lista= ["loquesea", "enmanuel", "pedro", "italia"]
 
-if "loquesea" in lista:
-    print("Es cierto")
+# if "loquesea" in lista:
+#     print("Es cierto")
 
-if "Maria" in lista:
-    print("Es falso")
-else:
-    print("Es verdadero")
+# if "Maria" in lista:
+#     print("Es falso")
+# else:
+#     print("Es verdadero")
 
 # Identidad
 # is en python se utiliza para la identidad en memoria de un objeto
 
-a = [1,2,3]
-b = a
-c = [1,2,3]
+# a = [1,2,3]
+# b = a
+# c = [1,2,3]
 
-print(a == b)
-print(a == c)
-print(a is b)
-print(a is c)
+# print(a == b)
+# print(a == c)
+# print(a is b)
+# print(a is c)
 
 
 # Iterable
 
-names = ["Maria", "Pedro", "Gustavo", "Francisco"]
+# names = ["Maria", "Pedro", "Gustavo", "Francisco"]
 
-for name in names:
-    print(name)
-    if name == "Pedro":
-        print("Lo conseguí")
-    else: 
-        print("Se lo llevó la vieja")
+# for name in names:
+#     print(name)
+#     if name == "Pedro":
+#         print("Lo conseguí")
+#     else: 
+#         print("Se lo llevó la vieja")
 
 # Excepciones
 """
@@ -98,7 +98,7 @@ finally:
 
 def recorrer_numero():
     for numero in range(10, 56):
-        if numero % 2 == 0 and numero != 16 and numero % 3 != 0:
+        if numero % 2 == 0 and numero != 16 and numero % 3 != 0: # numero % 3 != 0 verifica que sea par el numero 
             print(numero)
       
 

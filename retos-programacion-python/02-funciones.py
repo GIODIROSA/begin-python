@@ -23,4 +23,70 @@
  */
  """
 
- 
+# def funcionSinRetorno():
+#     print("Una función sin retorno")
+
+# funcionSinRetorno()
+
+
+# def funcionRetorno():
+#     message = "Un mensaje desde una función con retorno"
+#     return message
+
+# funcionRetorno()
+
+# def utilsFuncion():
+#     message= "Un mensaje desde otra funcion para ser usada en otra funciones"
+#     return message
+
+# def randomFuncion():
+#     utilsFuncion()
+
+# randomFuncion()
+
+# global_message= "Este es un mensaje global"
+
+# def funcionParaVariable():
+#     print("Global=>", global_message)
+#     message_local= "Este es un mensaje local"
+#     print("Local=>", message_local)
+
+# funcionParaVariable()
+
+# def funcionArgumentoUno(numero):
+#     saldo= numero
+#     print("Este es el saldo", saldo)
+
+# funcionArgumentoUno(1492)
+
+# def funcionParametroDos(nombre, numero):
+#     print(f"es un print con {nombre}, y el numero {numero}")
+
+# funcionParametroDos("Giovanni", 1987)
+
+
+#EXTRA 
+
+def contador(message_uno, message_dos):
+    contador = 0
+    for number in range(1, 101):
+        if number % 3 == 0 and number % 5 == 0: 
+            print(f"{message_uno} {message_dos}")
+        elif number % 3 == 0: #verifica que es multiplo de 3
+                print(message_uno)
+        elif number % 5 == 0:
+                print(message_dos)
+        else:
+            print(number)
+            contador += 1
+            
+    return contador         
+      
+
+
+message_uno = "fizz"
+message_dos = "buzz"
+print(f"el número de veces que se ha impreso el número en lugar de los textos: {contador(message_uno , message_dos)}")
+
+
+    
