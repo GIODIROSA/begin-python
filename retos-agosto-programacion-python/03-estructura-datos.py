@@ -19,6 +19,7 @@
 
 """
 
+
 #LISTA
 listas= ["Bonatti", "Di Rosa", "Brugnoli", "Errazurriz"]
 """
@@ -72,7 +73,6 @@ for item in range(0, len(colaboradores)):
     print(colaboradores[item])
 
 
-# Utiliza operaciones de inserción, borrado, actualización y ordenación.
 
 
 
