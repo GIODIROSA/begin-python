@@ -15,14 +15,13 @@
  */
 
 """
-AGENDA= []
-def ingresar_contacto(contactos):
-    AGENDA.append(contactos)
-    for index, contacto in enumerate(AGENDA):
-        nombre = contacto.get("nombre", "Nombre no disponible")
-        telefono = contacto.get("telefono", "Teléfono no disponible")
-        print('+' * 50)
-        print(f"{index+1}. Nombre: {nombre}, Teléfono: {telefono}")
+agenda= {}
+def ingresar_contacto(nombre, numero):
+    agenda['nombre'] = nombre
+    agenda['numero'] = numero
+    print("=>", agenda)
+
+
 
 
 def actualizar_contacto(contacto):
@@ -68,11 +67,7 @@ def agenda_contacto(texto_agenda_contacto):
                   raise ValueError
 
               if nombre:
-                  contacto_nuevo={
-                     'nombre': nombre,
-                     'telefono': numero
-                 }
-                  ingresar_contacto(contacto_nuevo)
+                  ingresar_contacto(nombre, numero)
               else:
                   print("No ingresaste un nombre válido, por favor intenta de nuevo.")
 
