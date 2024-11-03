@@ -22,6 +22,8 @@ class Inventario:
             self.productos[producto.id]= producto
 
 inventario1= Inventario()
-producto1= Producto(id:1, nombre:"Manzana", precio:0.50, cantidad:100)
+producto1= Producto(id=1, nombre="Manzana", precio=0.50, cantidad=100)
+print(inventario1.productos)
 inventario1.agregar_producto(producto1)
+print(inventario1.productos)
 
