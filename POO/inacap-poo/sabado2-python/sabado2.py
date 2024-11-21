@@ -1,13 +1,21 @@
-class Automovil:
+from transporte import Transporte
+
+class Automovil(Transporte):
     __marca= ""
     __modelo= ""
     __cilindrada= ""
-    __posicion= 0
-    def __init__(self, marca, modelo, cilindrada, posicion= 0):
+
+    def __init__(self, marca, modelo, cilindrada, capacidad, color, velocidad, posicion, consumo, metros):
         self.__marca = marca
         self.__modelo = modelo
         self.__cilindrada = cilindrada
+        self.__capacidad = capacidad
+        self.__color = color
+        self.__velocidad = velocidad
         self.__posicion = posicion
+        self.__consumo = consumo
+        self.__metros = metros
+   
     
     def __del__(self):
         print(f"Se ha eliminado el automovil {self.__marca} - {self.__modelo} - {self.__cilindrada}")
@@ -21,40 +29,24 @@ class Automovil:
         return self.__modelo
     def getCilindrada(self):
         return self.__cilindrada
-    def getPosicion(self):
-        return self.__posicion
     def setMarca(self, marca):
         self.__marca = marca
     def setModelo(self, modelo):
         self.__modelo = modelo
     def setCilindrada(self, cilindrada):
         self.__cilindrada = cilindrada
-    def setPosicion(self, posicion):
-        self.__posicion = posicion
-    def mostrarPosicion(self):
-        return self.__posicion
-        
-    def avanzar(self, metros= 0):
-        self.__posicion += metros
-        return f"avanzando desde {self.__posicion - metros} a {self.__posicion}: {metros} metros"
-        
-        
-    def retrocede(self, metros= 0):
-        self.__posicion -= metros
-        return f"Retroce desde {self.__posicion + metros} a {self.__posicion}: {metros} metros"
-        
+
         
 
 
-
-
-auto1 = Automovil("Nissan", "Navara", "2.5")
+auto1 = Automovil("Nissan", "Navara", "2.5", "2 tonelada", "plormo", 180, 100, "20 km/l", "50")
 
 print(auto1.avanzar(100))
 print(auto1.avanzar(800))
 
 
 print(auto1.retrocede(200))
+
 
 
 
