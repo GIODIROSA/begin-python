@@ -5,6 +5,7 @@ class Transporte:
     __posicion = 0
     __consumo = ""
     __metros = ""
+  
     
         
     def getCapacidad(self):
@@ -22,6 +23,7 @@ class Transporte:
     def getMetros(self):
         return self.__metros
     
+    
     def setCapacidad(self, capacidad):
         self.__capacidad = capacidad
         
@@ -30,6 +32,15 @@ class Transporte:
     
     def setVelocidad(self, velocidad):
         self.__velocidad = velocidad
+        
+    def setPosicion(self, posicion):
+        self.__posicion = posicion
+        
+    def setConsumo(self, consumo):
+        self._consumo = consumo
+        
+    def setMetros(self, metros):
+        self.__metros = metros
         
         
     def avanzar(self, metros= 0):

@@ -4,17 +4,19 @@ class Automovil(Transporte):
     __marca= ""
     __modelo= ""
     __cilindrada= ""
+    __litros= 0
 
-    def __init__(self, marca, modelo, cilindrada, capacidad, color, velocidad, posicion, consumo, metros):
+    def __init__(self, marca, modelo, cilindrada, litros, capacidad, color, velocidad, posicion, consumo, metros):
         self.__marca = marca
         self.__modelo = modelo
         self.__cilindrada = cilindrada
-        self.__capacidad = capacidad
-        self.__color = color
-        self.__velocidad = velocidad
-        self.__posicion = posicion
-        self.__consumo = consumo
-        self.__metros = metros
+        self.__litros = litros
+        self.setCapacidad(capacidad)
+        self.setColor(color)
+        self.setVelocidad(velocidad)
+        self.setPosicion(posicion)
+        self.setConsumo(consumo)
+        self.setMetros(metros)
    
     
     def __del__(self):
@@ -35,6 +37,9 @@ class Automovil(Transporte):
         self.__modelo = modelo
     def setCilindrada(self, cilindrada):
         self.__cilindrada = cilindrada
+    
+    def cargarCombustible(self, litros):
+        return f"Se han cargado {litros}"
 
         
 
