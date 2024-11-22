@@ -1,5 +1,5 @@
 class Transporte:
-    __capacidad= ""
+    __capacidad= 0
     __color = "blanco"
     __velocidad = 0 
     __posicion = 0
@@ -23,6 +23,8 @@ class Transporte:
     def getMetros(self):
         return self.__metros
     
+    def getPosicion(self):
+        return self.__posicion
     
     def setCapacidad(self, capacidad):
         self.__capacidad = capacidad

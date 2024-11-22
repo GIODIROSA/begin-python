@@ -5,15 +5,15 @@ class Animal(Transporte):
     __especie= ""
     __raza = ""
     __energia = 0
+
     
     
-    def __init__(self, especie, raza, capacidad, color, energia = 100):
+    def __init__(self, especie, raza, capacidad, posicion, energia = 100):
         self.__especie = especie
         self.__raza = raza
         self.__energia = energia
-        self.getCapacidad(capacidad)
-        self.getColor(color)
-        self.get
+        self.setCapacidad(capacidad)
+        self.setPosicion(posicion)
         
         
     def getEspecie(self):
@@ -38,19 +38,35 @@ class Animal(Transporte):
         self.__energia = energia
     
     
-    def comer(self, energia):
-        self.__energia = energia
-        return f"El animal se ha alimentado y ha sumado {energia} de energia"
+    def comer(self, kilos):
+        self.__energia += kilos
+        return f"El animal se ha alimentado y ha sumado {kilos} de energia"
     
-    def beber(self, ):
-        pass
+    def beber(self, litros):
+        self.__energia += litros
+        return f"Se han sumado {litros} de energia a {self.__energia}"
+        
     
-    def avanzar(self, metros):
-        pass
+    def avanzar(self, posicion= 0):
+        self.__posicion += posicion
+        return f"avanzando desde {self.__posicion - posicion} a {self.__posicion}: {posicion} "
         
         
         
+animal1 = Animal("Equus caballus", "Mustang", 50, 100, 200)
+
+"""    
+especie = "Equus caballus"
+raza = "Mustang"
+capacidad= 50
+posicion= 100
+energia = 200
         
+"""
+
+
+print(animal1.beber(20))
+
         
 
 
