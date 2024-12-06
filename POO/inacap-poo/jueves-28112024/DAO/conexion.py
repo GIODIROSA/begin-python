@@ -5,7 +5,7 @@ class Conexion:
     host = "localhost"
     usuario = "cliente"
     clave = "123456"
-    bd = "gestionclientes"
+    bd = "gestion_clientes"
     
     def __init__(self):
         self.db = pymysql.connect(host= self.host, user= self.usuario, password= self.clave, db= self.bd)
